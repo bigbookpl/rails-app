@@ -1,0 +1,11 @@
+<h1>Listing articles</h1>
+<%= link_to 'New article', new_article_path %>
+<table border="2">
+  <% @articles.each do |a| %>
+  <tr>
+    <td><%= a.title %></td>
+    <td><%= a.content %></td>
+    <td><%= link_to 'pokaż', edit_article_path(a.id) %></td>
+  </tr>
+  <% end %>
+</table>
