@@ -5,7 +5,9 @@
   <tr>
     <td><%= a.title %></td>
     <td><%= a.content %></td>
-    <td><%= link_to 'pokaż', edit_article_path(a.id) %></td>
+    <td><%= link_to 'edit', edit_article_path(a) %></td>
+    <td><%= link_to 'pokaż', article_path(a) %></td>
+    <td><%= link_to 'usuń', article_path(a), method: :delete, data: {confirm: 'Are you sure?'} %></td>
   </tr>
   <% end %>
 </table>
