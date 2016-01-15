@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'welcome/index'
   get 'welcome/hello'
 
@@ -12,6 +13,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :cars do
+
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

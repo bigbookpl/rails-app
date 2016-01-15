@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    session[:user_id] = "Mr. Hello"
   end
 
   def edit

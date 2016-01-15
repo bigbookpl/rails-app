@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+.table-header {
+    background-color: green;
+    color: #F7F7F7;
+    border-collapse: collapse;
+}
+
+.table-header td {
+    padding: 10px;
+}
+
+.data-table td {
+    background-color: #BBBBBB;
+    padding: 15px;
+}
+
+.data-table tr:hover td {
+    background-color: darkorange;
+}
