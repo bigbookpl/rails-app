@@ -1,0 +1,18 @@
+<h1>Cars#index</h1>
+<p>Find me in app/views/cars/index.html.erb</p>
+<table>
+<tr class="table-header">
+  <td>Model</td>
+  <td>Producer</td>
+  <td>Production year</td>
+</tr>
+<% @cars.each do |car| %>
+    <tr>
+      <td><%= car.model %></td>
+      <td><%= car.producer %></td>
+      <td><%= car.production_year %></td>
+      <td><a href="<%= car_path car%>">show</a></td>
+      <td><%= link_to "pokaż", car_path(car) %></td>
+    </tr>
+<% end  %>
+</table>
