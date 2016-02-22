@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.find(params[:id]).decorate
   end
 
   def create
@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all
+    @articles = Article.all.decorate
     session[:user_id] = "Mr. Hello"
   end
 
